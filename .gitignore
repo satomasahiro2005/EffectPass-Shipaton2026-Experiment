@@ -1,0 +1,57 @@
+*.dSYM/
+*.ipa
+*.log
+*.xcodeproj/
+*.xcworkspace/
+.DS_Store
+DerivedData/
+Generated/note-models/
+Generated/dsp-check/
+Generated/host-check/
+build/
+out-sim/
+out/
+project-sim.yml
+# RevenueCat の SDK 鍵。形は Config/Secrets.xcconfig.example。
+Config/Secrets.xcconfig
+xcuserdata/
+node_modules/
+__pycache__/
+# SwiftPM の出力（Tests/Linux・Tests/Fuzz の包みを手元で建てたとき）。
+.build/
+# 根に残っている textlint の残骸だけ。
+/package-lock.json
+# swiftly が置く手元の版。project.yml の SWIFT_VERSION とは別物。
+.swift-version
+
+# 撮った画面。どれも Scripts の出力先で、撮るたびに変わる。
+/shots/
+/shot.png
+/shots-all/
+/shots-render/
+/shots-screens/
+/shots-store/
+
+# 手元の記録。公開しない。
+docs/connect-log.md
+docs/next.md
+docs/session-*.md
+docs/which-apps.md
+docs/ipad-ui.md
+docs/altstore/timing.md
+
+# エージェントの作業場。
+.claude/
+
+# 調査用。プロジェクトに繋いでいない。
+TestsMotion/
+
+# Local-only JSFX used to exercise the host while it is being developed.
+# Never commit or ship these; Release builds do not embed this directory.
+Local/DebugJSFXFactory/
+
+# 手元の手順書。ssh 先・実機の UDID・鍵の置き場が入っている
+docs/mac.md
+
+# Apple の公式文書の写し。**再配布しない。**手元で読むためだけに置く。
+docs/apple/

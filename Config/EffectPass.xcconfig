@@ -1,0 +1,3 @@
+// RevenueCat の SDK 鍵は Secrets.xcconfig（追跡しない）に書く。形は Secrets.xcconfig.example。
+RC_API_KEY =
+#include? "Secrets.xcconfig"

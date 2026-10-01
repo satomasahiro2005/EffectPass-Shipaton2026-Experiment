@@ -1,0 +1,51 @@
+# docs
+
+What each file here is. Design documents describe how something works now; notes are
+records of one integration, investigation or test day and are not kept up to date.
+
+Most of these were written for EffectDeck, the free app EffectPass is built from, before
+EffectPass was split off. Where they say EffectDeck, the same applies to EffectPass's code,
+and issue numbers refer to EffectDeck's tracker.
+
+## Design
+
+| File | What it is |
+|---|---|
+| [external-processor.md](external-processor.md) | The `ETExternalProcessor` boundary that AUv3 and JSFX nodes run through, and the EffeTune patches it needs |
+| [multichannel-output.md](multichannel-output.md) | Output on 2–16 channel audio interfaces, Routing, Bass Management |
+| [jsfx-host-test-design.md](jsfx-host-test-design.md) | Test design for the JSFX host (Japanese). Partly implemented; its status section maps sections to `Tests/Unit/JSFX*Tests.swift` |
+
+The contracts for users and language models are at the top of the repository:
+[`JSFX.md`](../JSFX.md) and [`CHAIN.md`](../CHAIN.md).
+
+## Logs
+
+| File | What it is |
+|---|---|
+| [battery-log.md](battery-log.md) | Issue #5, battery drain with the screen off (Japanese). A running log: measured and guessed are kept apart, dead ends stay in |
+
+## Notes
+
+| File | What it is |
+|---|---|
+| [notes/effetune-2.10.0.md](notes/effetune-2.10.0.md) | What the EffeTune 2.10.0 integration changed |
+| [notes/effetune-2.11.0.md](notes/effetune-2.11.0.md) | What the EffeTune 2.11.0 (DSP 0.11.0) integration changed |
+| [notes/au-post-insert.md](notes/au-post-insert.md) | The first AUv3 host, a fixed post-insert. Superseded by AU nodes in the chain |
+| [notes/mde-routing-question.md](notes/mde-routing-question.md) | The question for issues #3 and #4: when iOS keeps a player on the EffectDeck route |
+| [notes/mde-routing-answer.md](notes/mde-routing-answer.md) | The answer, reconstructed from iOS 27's `MediaExperience` (Japanese) |
+| [notes/test-2026-09-20.md](notes/test-2026-09-20.md) | The device checklist for build 2026.09.20 (Japanese) |
+| [notes/screencapturekit.md](notes/screencapturekit.md) | Why ScreenCaptureKit cannot replace another app's audio, measured on iOS 27.2 beta 2 (Japanese). An EffectDeck note inherited with its code; its conclusions are about EffectDeck |
+
+## Images
+
+| Path | What it is |
+|---|---|
+| `icon.png`, `icon-dark.png` | The EffectPass app icon (orange), light and dark. The README shows them |
+| `shot-*.png` | The README screenshots, taken from EffectPass on the iPad simulator |
+
+## Not in the repository
+
+Some tracked files cite `docs/connect-log.md` (the log of the Unable to Connect
+investigation) and `docs/apple/` (copies of Apple documentation). Both are kept only on the
+owner's machine and are listed in `.gitignore`, as are the other local notes there. The
+citations are kept so the owner can follow them; there is nothing to fetch.

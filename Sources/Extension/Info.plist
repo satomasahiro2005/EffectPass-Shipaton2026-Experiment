@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<!-- 画面には出ない。一覧の 2 行目は下の UTTypeDescription のほう。 -->
+	<key>CFBundleDisplayName</key>
+	<string>EffeTune</string>
+	<key>EXAppExtensionAttributes</key>
+	<dict>
+		<key>EXExtensionPointIdentifier</key>
+		<string>com.apple.media-device-extension</string>
+	</dict>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeIdentifier</key>
+			<string>media-device-protocol.ai.nemut.effectpass</string>
+			<!-- **コントロールセンターの一覧の 2 行目はこの字。**実機で確認した。
+			     1 行目が名前なので、ここは通す音の形を出す。**ケーブルの入口は
+			     固定**で、EffeTuneDriver.m:49-50 の kSampleRate 48000 /
+			     kChannelCount 2、EffeTuneFormat() が 32bit float。
+			     識別子（UTTypeIdentifier）のほうは替えないこと。替えると別の型に
+			     なって登録が入れ替わる。 -->
+			<key>UTTypeDescription</key>
+			<string>48 kHz, 32-bit float</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.media-sharing-protocol</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
